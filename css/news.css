@@ -1,0 +1,181 @@
+:root {
+  --bg-color: #75c8ec; /* اللون الأساسي */
+  --shadow-color: #50bcea83; /* الشادو */
+  --color: #fff;
+}
+body {
+  background-image: url("/img/pexels-joshsorenson-391522.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* navbar */
+nav .navbar-brand {
+  color: var(--color) !important;
+  font-weight: 700 !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.nav-item .nav-link {
+  margin: 5px 20px;
+  color: var(--color) !important;
+  padding: 5px 20px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 20px;
+}
+
+.nav-item:hover .nav-link {
+  box-shadow: 0 4px 10px 5px var(--shadow-color) !important;
+  border-color: var(--bg-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+  border-color: var(--bg-color);
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.card {
+  box-shadow: 0 0 10px 5px var(--shadow-color) !important;
+  border-color: var(--bg-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.123) !important;
+  color: var(--color) !important;
+  height: 350px !important;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.box img {
+  transition: transform 0.4s ease-in-out;
+  height: 200px !important;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.256);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+  width: 100%;
+}
+
+.box:hover::after {
+  opacity: 1;
+}
+
+.card-body a {
+  text-decoration: none;
+}
+.card-body a:hover {
+  text-decoration: underline;
+}
+/* input */
+.form-control {
+  box-shadow: 0 0 10px var(--shadow-color) !important;
+  border-color: var(--bg-color) !important;
+  background-color: rgba(0, 0, 0, 0.244) !important;
+  color: var(--color) !important;
+}
+/* buttons */
+.btn {
+  background-color: transparent !important;
+  box-shadow: 0 0 10px var(--shadow-color) !important;
+  border-color: var(--bg-color) !important;
+  color: var(--bg-color) !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--bg-color) !important;
+  color: var(--color) !important;
+  border-color: var(--bg-color) !important;
+  box-shadow: 0 0 15px 10px var(--shadow-color) !important;
+}
+
+/* border-top */
+.border-to {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin-top: 150px;
+}
+
+.border-to::after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* icon */
+span i {
+  position: relative;
+  font-size: 20px;
+  color: var(--color); /* لون الأيقونة الأساسي */
+  margin: 0 15px;
+  transition: all 0.3s ease;
+  z-index: 5;
+  cursor: pointer;
+}
+
+span i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--bg-color);
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 0; /* خلف الأيقونة */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 2px var(--shadow-color);
+}
+
+span i:hover {
+  color: var(--color) !important;
+}
+
+span i:hover::after {
+  background-color: var(--bg-color);
+  border-color: var(--color);
+  box-shadow: 0 2px 5px 5px var(--shadow-color);
+  z-index: -5;
+}
+
+/* last p */
+.last-p {
+  color: var(--bg-color) !important;
+  font-weight: 700;
+}
